@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Expert IT Management Outsourcing, BIM Design, and Support Services to enhance your business efficiency and operations." />
+  <meta name="author" content="TWBIS.INFO" />
+  <meta property="og:title" content="TWBIS.INFO – Digital Engineering & IT Outsourcing" />
+  <meta property="og:description" content="Your Global Partner for Outsourced IT, Security, NOC, VA, BIM and Architectural 3D Design." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://twbis.info/" />
+  <title>TWBIS.INFO – Digital Engineering & IT Outsourcing</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --navy:   #0a1628;
+      --navy2:  #112240;
+      --teal:   #00c9a7;
+      --teal2:  #00a88e;
+      --ice:    #e8f4f1;
+      --white:  #ffffff;
+      --slate:  #8892a4;
+      --text:   #ccd6f6;
+      --accent: #64ffda;
+      --card-bg:#112240;
+      --radius: 12px;
+      --shadow: 0 8px 40px rgba(0,0,0,0.35);
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--navy);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1,h2,h3,h4,h5 { font-family: 'Syne', sans-serif; }
+    a { color: var(--teal); text-decoration: none; transition: color .2s; }
+    a:hover { color: var(--accent); }
+    img { max-width: 100%; display: block; }
+
+    /* ===== SCROLLBAR ===== */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--navy); }
+    ::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 10px; }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%;
+      height: 72px;
+      background: rgba(10,22,40,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(0,201,167,0.12);
+      transition: background .3s;
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: var(--white);
+      letter-spacing: .04em;
+    }
+    .nav-logo span { color: var(--teal); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: .88rem;
+      font-weight: 500;
+      color: var(--text);
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta {
+      background: transparent;
+      border: 1.5px solid var(--teal);
+      color: var(--teal);
+      padding: .45rem 1.25rem;
+      border-radius: 6px;
+      font-family: 'Syne', sans-serif;
+      font-size: .85rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      cursor: pointer;
+      transition: background .2s, color .2s;
+      text-transform: uppercase;
+    }
+    .nav-cta:hover { background: var(--teal); color: var(--navy); }
+
+    /* Hamburger */
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--teal); border-radius: 2px; transition: .3s; }
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 72px; left: 0; right: 0;
+      background: var(--navy2);
+      padding: 1.5rem 5%;
+      border-bottom: 1px solid rgba(0,201,167,0.15);
+      z-index: 998;
+      gap: .8rem;
+    }
+    .mobile-menu a {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      padding: .5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .mobile-menu a:hover { color: var(--accent); }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding: 120px 5% 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 80% 40%, rgba(0,201,167,0.10) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 50% at 10% 80%, rgba(100,255,218,0.06) 0%, transparent 60%),
+        linear-gradient(160deg, #0a1628 0%, #0d1f3c 60%, #0a1628 100%);
+    }
+    .hero-grid {
+      position: absolute; inset: 0; z-index: 0;
+      background-image:
+        linear-gradient(rgba(0,201,167,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,201,167,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 760px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: rgba(0,201,167,0.1);
+      border: 1px solid rgba(0,201,167,0.25);
+      color: var(--accent);
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: .35rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+    .hero-badge::before { content: ''; display: inline-block; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: pulse 1.8s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.4)} }
+    .hero-content h1 {
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+    .hero-content h1 span { color: var(--teal); }
+    .hero-content p {
+      font-size: 1.1rem;
+      color: var(--slate);
+      max-width: 540px;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: var(--teal);
+      color: var(--navy);
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: .9rem;
+      letter-spacing: .05em;
+      padding: .85rem 2rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background .2s, transform .2s, box-shadow .2s;
+      text-transform: uppercase;
+    }
+    .btn-primary:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,201,167,0.3); color: var(--navy); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: transparent;
+      color: var(--text);
+      font-family: 'Syne', sans-serif;
+      font-weight: 600;
+      font-size: .9rem;
+      letter-spacing: .05em;
+      padding: .85rem 2rem;
+      border-radius: 8px;
+      border: 1.5px solid rgba(204,214,246,0.3);
+      cursor: pointer;
+      transition: border-color .2s, color .2s;
+      text-transform: uppercase;
+    }
+    .btn-secondary:hover { border-color: var(--teal); color: var(--teal); }
+    .hero-stats {
+      display: flex; gap: 3rem; margin-top: 4rem; flex-wrap: wrap;
+    }
+    .hero-stat { }
+    .hero-stat .num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--teal);
+      line-height: 1;
+    }
+    .hero-stat .label { font-size: .78rem; color: var(--slate); letter-spacing: .08em; text-transform: uppercase; margin-top: .25rem; }
+
+    /* ===== SECTION HELPERS ===== */
+    section { padding: 100px 5%; }
+    .section-tag {
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: .75rem;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .section-title span { color: var(--teal); }
+    .section-sub {
+      font-size: 1rem;
+      color: var(--slate);
+      max-width: 520px;
+      font-weight: 300;
+    }
+    .section-header { margin-bottom: 3.5rem; }
+
+    /* ===== DIVIDER ===== */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(0,201,167,0.2), transparent);
+      margin: 0 5%;
+    }
+
+    /* ===== ABOUT ===== */
+    #about { background: var(--navy2); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .about-img-wrap {
+      position: relative;
+    }
+    .about-img-wrap img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-radius: var(--radius);
+    }
+    .about-img-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 14px -14px -14px 14px;
+      border: 2px solid var(--teal);
+      border-radius: var(--radius);
+      z-index: -1;
+    }
+    .about-text { }
+    .about-text h2 { margin-bottom: 1rem; }
+    .about-text p { color: var(--slate); margin-bottom: 1.5rem; font-weight: 300; }
+    .about-text ul { list-style: none; display: flex; flex-direction: column; gap: .65rem; }
+    .about-text ul li {
+      display: flex; align-items: flex-start; gap: .75rem;
+      font-size: .95rem; color: var(--text);
+    }
+    .about-text ul li::before {
+      content: '▸';
+      color: var(--teal);
+      flex-shrink: 0;
+      margin-top: .1rem;
+    }
+
+    /* ===== SERVICES ===== */
+    #services { }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .service-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(0,201,167,0.1);
+      border-radius: var(--radius);
+      padding: 2rem;
+      transition: transform .25s, border-color .25s, box-shadow .25s;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--teal), var(--accent));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .3s;
+    }
+    .service-card:hover { transform: translateY(-6px); border-color: rgba(0,201,167,0.3); box-shadow: 0 16px 50px rgba(0,0,0,0.35); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon {
+      width: 48px; height: 48px;
+      background: rgba(0,201,167,0.1);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.25rem;
+    }
+    .service-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: .65rem;
+    }
+    .service-card p {
+      font-size: .87rem;
+      color: var(--slate);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    /* ===== WHY CHOOSE ===== */
+    #why { background: var(--navy2); }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+    .why-item { text-align: center; padding: 2rem 1rem; }
+    .why-icon {
+      width: 64px; height: 64px;
+      background: rgba(0,201,167,0.08);
+      border: 1.5px solid rgba(0,201,167,0.2);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+      margin: 0 auto 1.25rem;
+    }
+    .why-item h4 { color: var(--white); font-size: 1rem; margin-bottom: .5rem; }
+    .why-item p { font-size: .85rem; color: var(--slate); font-weight: 300; }
+
+    /* ===== TESTIMONIAL ===== */
+    #testimonials { }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .testimonial-card {
+      background: var(--card-bg);
+      border: 1px solid rgba(0,201,167,0.1);
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+    .stars { color: #f5c518; font-size: 1rem; margin-bottom: 1rem; letter-spacing: .1em; }
+    .testimonial-card p { font-size: .92rem; color: var(--text); font-style: italic; margin-bottom: 1.25rem; line-height: 1.7; }
+    .t-author { display: flex; align-items: center; gap: .75rem; }
+    .t-avatar {
+      width: 38px; height: 38px;
+      background: var(--teal);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: .9rem;
+      color: var(--navy);
+    }
+    .t-info .name { font-weight: 600; font-size: .88rem; color: var(--white); }
+    .t-info .role { font-size: .78rem; color: var(--teal); }
+
+    /* ===== CONTACT ===== */
+    #contact { background: var(--navy2); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .contact-info h2 { margin-bottom: 1rem; }
+    .contact-info p { color: var(--slate); margin-bottom: 2.5rem; font-weight: 300; }
+    .contact-item {
+      display: flex; align-items: flex-start; gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+    .c-icon {
+      width: 44px; height: 44px;
+      background: rgba(0,201,167,0.1);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .c-label { font-size: .75rem; color: var(--teal); text-transform: uppercase; letter-spacing: .1em; font-weight: 600; }
+    .c-val { font-size: .92rem; color: var(--text); margin-top: .15rem; }
+    .c-val a { color: var(--text); }
+    .c-val a:hover { color: var(--teal); }
+
+    .hours-table { margin-top: 2rem; }
+    .hours-table h4 { font-size: .85rem; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); margin-bottom: .75rem; }
+    .hours-table table { width: 100%; border-collapse: collapse; }
+    .hours-table td { padding: .4rem 0; font-size: .87rem; color: var(--slate); border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .hours-table td:first-child { color: var(--text); font-weight: 500; width: 40%; }
+    .hours-table td.closed { color: #ff6b6b; }
+
+    /* Form */
+    .contact-form { }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: .4rem; margin-bottom: 1rem; }
+    .form-group label { font-size: .78rem; color: var(--teal); text-transform: uppercase; letter-spacing: .1em; font-weight: 600; }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(204,214,246,0.15);
+      border-radius: 8px;
+      padding: .75rem 1rem;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: .92rem;
+      transition: border-color .2s;
+      outline: none;
+      width: 100%;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus { border-color: var(--teal); }
+    .form-group textarea { resize: vertical; min-height: 130px; }
+    .form-group select option { background: var(--navy2); color: var(--text); }
+    .form-submit { width: 100%; margin-top: .5rem; }
+    .form-note { font-size: .76rem; color: var(--slate); margin-top: .75rem; }
+    #form-msg { margin-top: .75rem; font-size: .88rem; }
+    #form-msg.success { color: var(--teal); }
+    #form-msg.error { color: #ff6b6b; }
+
+    /* ===== SUBSCRIBE ===== */
+    #subscribe {
+      text-align: center;
+      padding: 80px 5%;
+      background: linear-gradient(135deg, rgba(0,201,167,0.06), rgba(100,255,218,0.03));
+      border-top: 1px solid rgba(0,201,167,0.1);
+      border-bottom: 1px solid rgba(0,201,167,0.1);
+    }
+    #subscribe h2 { margin-bottom: .75rem; }
+    #subscribe p { color: var(--slate); margin-bottom: 2rem; }
+    .subscribe-form { display: flex; gap: .75rem; max-width: 420px; margin: 0 auto; }
+    .subscribe-form input {
+      flex: 1;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(204,214,246,0.2);
+      border-radius: 8px;
+      padding: .75rem 1rem;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: .92rem;
+      outline: none;
+      transition: border-color .2s;
+    }
+    .subscribe-form input:focus { border-color: var(--teal); }
+    #sub-msg { margin-top: .75rem; font-size: .85rem; color: var(--teal); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #060e1a;
+      padding: 60px 5% 30px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    .footer-brand .nav-logo { font-size: 1.4rem; margin-bottom: 1rem; display: inline-block; }
+    .footer-brand p { font-size: .87rem; color: var(--slate); max-width: 300px; line-height: 1.7; }
+    .footer-col h5 {
+      font-size: .75rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 1.25rem;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .footer-col ul li a { font-size: .87rem; color: var(--slate); transition: color .2s; }
+    .footer-col ul li a:hover { color: var(--white); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: .75rem;
+    }
+    .footer-bottom p { font-size: .8rem; color: var(--slate); }
+    .footer-bottom a { font-size: .8rem; color: var(--slate); }
+    .footer-bottom a:hover { color: var(--teal); }
+
+    /* Social */
+    .social-row { display: flex; gap: .75rem; margin-top: 1.25rem; }
+    .social-btn {
+      width: 36px; height: 36px;
+      background: rgba(0,201,167,0.08);
+      border: 1px solid rgba(0,201,167,0.2);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .95rem;
+      color: var(--slate);
+      transition: background .2s, color .2s;
+    }
+    .social-btn:hover { background: var(--teal); color: var(--navy); }
+
+    /* ===== BACK TO TOP ===== */
+    #back-top {
+      position: fixed; bottom: 28px; right: 28px;
+      width: 44px; height: 44px;
+      background: var(--teal);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      color: var(--navy);
+      cursor: pointer;
+      opacity: 0; pointer-events: none;
+      transition: opacity .3s, transform .2s;
+      z-index: 900;
+      box-shadow: 0 4px 20px rgba(0,201,167,0.4);
+    }
+    #back-top.show { opacity: 1; pointer-events: all; }
+    #back-top:hover { transform: translateY(-3px); }
+
+    /* ===== COOKIE BANNER ===== */
+    #cookie-banner {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      background: rgba(10,22,40,0.97);
+      border-top: 1px solid rgba(0,201,167,0.2);
+      padding: 1rem 5%;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      z-index: 9999;
+      flex-wrap: wrap;
+    }
+    #cookie-banner p { font-size: .82rem; color: var(--slate); flex: 1; min-width: 220px; }
+    #cookie-banner a { color: var(--teal); }
+    .cookie-btn {
+      background: var(--teal);
+      color: var(--navy);
+      border: none;
+      padding: .5rem 1.4rem;
+      border-radius: 6px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: .82rem;
+      letter-spacing: .06em;
+      cursor: pointer;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+    .cookie-btn:hover { background: var(--accent); }
+
+    /* ===== FADE-IN ANIMATION ===== */
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .nav-links, .nav-cta-wrap { display: none; }
+      .hamburger { display: flex; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-img-wrap { order: -1; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1/-1; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 70px 5%; }
+      .hero-stats { gap: 1.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .subscribe-form { flex-direction: column; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">TWBIS<span>.INFO</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-cta-wrap">
+    <a href="#contact" class="nav-cta">Get a Quote</a>
+  </div>
+  <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#why" onclick="closeMobile()">Why Us</a>
+  <a href="#testimonials" onclick="closeMobile()">Testimonials</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content fade-in visible">
+    <div class="hero-badge">Global IT & Engineering Partner</div>
+    <h1>Digital Engineering &amp;<br><span>IT Outsourcing</span> Solutions</h1>
+    <p>Your trusted partner for Outsourced IT, Cybersecurity, NOC, Virtual Assistants, Building Information Modeling (BIM), and Architectural 3D Design.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Get Started Today ›</a>
+      <a href="#services" class="btn-secondary">Our Services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">24/7</div><div class="label">Operations Support</div></div>
+      <div class="hero-stat"><div class="num">8+</div><div class="label">Specialised Services</div></div>
+      <div class="hero-stat"><div class="num">100%</div><div class="label">Remote-Ready Teams</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img-wrap fade-in">
+      <img src="https://img1.wsimg.com/isteam/getty/2169264274/:/rs=w:600,h:300,cg:true,m/cr=w:600,h:300" alt="TWBIS.INFO team working in a modern office" loading="lazy" />
+    </div>
+    <div class="about-text fade-in">
+      <div class="section-tag">About TWBIS.INFO</div>
+      <h2 class="section-title">Our <span>Mission</span></h2>
+      <p>To deliver world-class outsourced workforce solutions that empower companies to operate smarter, innovate faster, and achieve sustainable success through specialized technical and operational expertise.</p>
+      <p>Based in Alabang, Muntinlupa, Philippines, we serve businesses globally — providing skilled remote professionals who seamlessly integrate into your operations.</p>
+      <ul>
+        <li>Dedicated specialists acting as an extension of your team</li>
+        <li>Enterprise-grade capabilities without the overhead</li>
+        <li>Scalable, flexible engagement models</li>
+        <li>Proven expertise across IT, Engineering, and Operations</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <div class="section-header fade-in">
+    <div class="section-tag">What We Offer</div>
+    <h2 class="section-title">Our <span>Services</span></h2>
+    <p class="section-sub">Comprehensive outsourced solutions tailored to your business needs — delivered by dedicated remote professionals.</p>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card fade-in">
+      <div class="service-icon">🖥️</div>
+      <h4>IT Helpdesk Support</h4>
+      <p>Dedicated remote IT Helpdesk teams managing user support, troubleshooting, ticket resolution, onboarding/offboarding, and daily technical assistance. Operating as a seamless extension of your IT department for global operations.</p>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">📡</div>
+      <h4>NOC – Network Operations Center</h4>
+      <p>Round-the-clock monitoring and maintenance of your network infrastructure. We handle alert response, incident management, performance optimization, patching, and escalation workflows — keeping systems stable and secure 24/7.</p>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">📞</div>
+      <h4>VOIP Support</h4>
+      <p>Expert VOIP specialists managing configuration, troubleshooting, call flow setup, SIP provisioning, PBX administration, and system optimization to keep your communications running reliably and efficiently.</p>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">🔐</div>
+      <h4>Cybersecurity Engineering</h4>
+      <p>Skilled Cybersecurity Engineers strengthening your security posture through threat monitoring, vulnerability assessments, SIEM operations, incident response, and security hardening — enterprise-level protection on demand.</p>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">⚙️</div>
+      <h4>Automation & Programming</h4>
+      <p>Developers who build automation scripts, integrations, and workflow enhancements that eliminate manual tasks. Supporting Python, PowerShell, API integrations, and cloud automation for greater operational efficiency.</p>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">👩‍💼</div>
+      <h4>Virtual Assistant</h4>
+      <p>Trained Virtual Assistants supporting administrative operations, customer service, documentation, scheduling, CRM management, and daily business tasks — reliable remote team members who enhance productivity.</p>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">📐</div>
+      <h4>CAD & 3D Modelling</h4>
+      <p>High-precision technical drawings and advanced 3D modeling solutions across design, engineering, architecture, and product development, with deep expertise in BIM design workflows.</p>
+    </div>
+    <div class="service-card fade-in">
+      <div class="service-icon">🏗️</div>
+      <h4>Building Information Modelling (BIM)</h4>
+      <p>BIM specialists delivering high-precision modeling, drafting, coordination, and documentation for AEC projects. Supporting Revit, Navisworks, AutoCAD, and Autodesk workflows without expanding your internal headcount.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== WHY CHOOSE ===== -->
+<section id="why">
+  <div class="section-header fade-in" style="text-align:center;">
+    <div class="section-tag">Why Choose Us</div>
+    <h2 class="section-title">Built for <span>Business Growth</span></h2>
+    <p class="section-sub" style="margin:0 auto;">We combine technical expertise with operational flexibility so you can focus on what matters most.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-item fade-in">
+      <div class="why-icon">🌍</div>
+      <h4>Global Reach</h4>
+      <p>Serving businesses worldwide from our base in the Philippines, with remote-first delivery.</p>
+    </div>
+    <div class="why-item fade-in">
+      <div class="why-icon">⏱️</div>
+      <h4>24/7 Availability</h4>
+      <p>Our NOC and IT support teams operate around the clock to ensure zero downtime for your business.</p>
+    </div>
+    <div class="why-item fade-in">
+      <div class="why-icon">💡</div>
+      <h4>Specialized Expertise</h4>
+      <p>Deep domain knowledge across IT, cybersecurity, VOIP, BIM, and business operations.</p>
+    </div>
+    <div class="why-item fade-in">
+      <div class="why-icon">📈</div>
+      <h4>Scalable Solutions</h4>
+      <p>Flexible team structures that grow with your business needs — no long-term lock-ins required.</p>
+    </div>
+    <div class="why-item fade-in">
+      <div class="why-icon">💰</div>
+      <h4>Cost Efficient</h4>
+      <p>Access enterprise-level talent and capabilities at a fraction of the cost of in-house staffing.</p>
+    </div>
+    <div class="why-item fade-in">
+      <div class="why-icon">🤝</div>
+      <h4>Seamless Integration</h4>
+      <p>Our teams integrate into your existing workflows, tools, and culture with minimal friction.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section id="testimonials">
+  <div class="section-header fade-in">
+    <div class="section-tag">Client Stories</div>
+    <h2 class="section-title">What Our <span>Clients Say</span></h2>
+    <p class="section-sub">Trusted by businesses across the globe to deliver consistent, high-quality outsourced support.</p>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card fade-in">
+      <div class="stars">★★★★★</div>
+      <p>"TWBIS transformed our IT operations. Their helpdesk team is responsive, knowledgeable, and genuinely feels like part of our internal team."</p>
+      <div class="t-author">
+        <div class="t-avatar">JM</div>
+        <div class="t-info">
+          <div class="name">James M.</div>
+          <div class="role">IT Director, Australia</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-in">
+      <div class="stars">★★★★★</div>
+      <p>"The BIM team delivered exceptional precision on our construction project. Deadlines met, quality unmatched. We'll definitely partner again."</p>
+      <div class="t-author">
+        <div class="t-avatar">SR</div>
+        <div class="t-info">
+          <div class="name">Sofia R.</div>
+          <div class="role">Project Manager, UAE</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-in">
+      <div class="stars">★★★★★</div>
+      <p>"Their NOC team monitors our network 24/7. The peace of mind this gives us is invaluable — incidents are caught and resolved before we even know about them."</p>
+      <div class="t-author">
+        <div class="t-avatar">DK</div>
+        <div class="t-info">
+          <div class="name">David K.</div>
+          <div class="role">CTO, UK</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-info fade-in">
+      <div class="section-tag">Get in Touch</div>
+      <h2 class="section-title">Let's <span>Work Together</span></h2>
+      <p>Ready to streamline your operations? Reach out and let's discuss how TWBIS.INFO can support your business goals.</p>
+
+      <div class="contact-item">
+        <div class="c-icon">📍</div>
+        <div>
+          <div class="c-label">Address</div>
+          <div class="c-val">Unit 1015, 10th Floor, Parkway Corporate Center,<br>Corporate Ave., Filinvest City, Alabang,<br>Muntinlupa, 1781 Philippines</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="c-icon">📱</div>
+        <div>
+          <div class="c-label">Phone / WhatsApp / Viber</div>
+          <div class="c-val"><a href="tel:+639171305179">+63 917 130 5179</a></div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="c-icon">📧</div>
+        <div>
+          <div class="c-label">Email</div>
+          <div class="c-val"><a href="mailto:marketing@twbis.info">marketing@twbis.info</a></div>
+        </div>
+      </div>
+
+      <div class="hours-table">
+        <h4>Business Hours</h4>
+        <table>
+          <tr><td>Monday</td><td>9:00 AM – 5:00 PM</td></tr>
+          <tr><td>Tuesday</td><td>9:00 AM – 5:00 PM</td></tr>
+          <tr><td>Wednesday</td><td>9:00 AM – 5:00 PM</td></tr>
+          <tr><td>Thursday</td><td>9:00 AM – 5:00 PM</td></tr>
+          <tr><td>Friday</td><td>9:00 AM – 5:00 PM</td></tr>
+          <tr><td>Saturday</td><td class="closed">Closed</td></tr>
+          <tr><td>Sunday</td><td class="closed">Closed</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="contact-form fade-in">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">First Name *</label>
+          <input type="text" id="fname" placeholder="John" required />
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" placeholder="Smith" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" placeholder="john@company.com" required />
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="+1 555 000 0000" />
+      </div>
+      <div class="form-group">
+        <label for="service">Service of Interest</label>
+        <select id="service">
+          <option value="">Select a service…</option>
+          <option>IT Helpdesk Support</option>
+          <option>NOC – Network Operations Center</option>
+          <option>VOIP Support</option>
+          <option>Cybersecurity Engineering</option>
+          <option>Automation & Programming</option>
+          <option>Virtual Assistant</option>
+          <option>CAD & 3D Modelling</option>
+          <option>Building Information Modelling (BIM)</option>
+          <option>Multiple Services</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="msg">Message *</label>
+        <textarea id="msg" placeholder="Tell us about your project or requirements…" required></textarea>
+      </div>
+      <button class="btn-primary form-submit" onclick="handleSubmit(event)">Send Message ›</button>
+      <p class="form-note">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply.</p>
+      <div id="form-msg"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SUBSCRIBE ===== -->
+<section id="subscribe">
+  <div class="section-tag" style="text-align:center;">Stay Updated</div>
+  <h2 class="section-title" style="text-align:center; margin-bottom:.75rem;">Subscribe to Our <span>Newsletter</span></h2>
+  <p style="color:var(--slate);text-align:center;margin-bottom:2rem;font-size:.95rem;">Get the latest updates on our services, industry insights, and exclusive offers.</p>
+  <div class="subscribe-form">
+    <input type="email" id="sub-email" placeholder="your@email.com" />
+    <button class="btn-primary" style="white-space:nowrap;" onclick="handleSubscribe()">Subscribe</button>
+  </div>
+  <div id="sub-msg"></div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="nav-logo">TWBIS<span style="color:var(--teal)">.INFO</span></span>
+      <p>Your global partner for outsourced IT management, engineering solutions, and business support services. Empowering businesses to operate smarter.</p>
+      <div class="social-row">
+        <a href="mailto:marketing@twbis.info" class="social-btn" title="Email" aria-label="Email">✉</a>
+        <a href="tel:+639171305179" class="social-btn" title="Call" aria-label="Phone">📞</a>
+        <a href="https://wa.me/639171305179" class="social-btn" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">💬</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="#services">IT Helpdesk Support</a></li>
+        <li><a href="#services">NOC Services</a></li>
+        <li><a href="#services">VOIP Support</a></li>
+        <li><a href="#services">Cybersecurity</a></li>
+        <li><a href="#services">Automation</a></li>
+        <li><a href="#services">Virtual Assistant</a></li>
+        <li><a href="#services">BIM & CAD</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#why">Why Choose Us</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="mailto:marketing@twbis.info">Careers</a></li>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 TWBIS.INFO — All Rights Reserved.</p>
+    <p>Unit 1015, Parkway Corporate Center, Filinvest City, Alabang, Philippines</p>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<div id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</div>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner">
+  <p>We use cookies to analyze website traffic and optimize your experience. By accepting, your data will be aggregated with all other user data. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></p>
+  <button class="cookie-btn" onclick="document.getElementById('cookie-banner').style.display='none'">Accept</button>
+</div>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+  // Hamburger
+  const ham = document.getElementById('hamburger');
+  const mob = document.getElementById('mobile-menu');
+  ham.addEventListener('click', () => {
+    const open = mob.style.display === 'flex';
+    mob.style.display = open ? 'none' : 'flex';
+  });
+  function closeMobile() { mob.style.display = 'none'; }
+
+  // Scroll: back-to-top + nav background
+  const backTop = document.getElementById('back-top');
+  window.addEventListener('scroll', () => {
+    backTop.classList.toggle('show', window.scrollY > 400);
+  });
+
+  // Fade-in observer
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Contact form
+  function handleSubmit(e) {
+    e.preventDefault();
+    const fname = document.getElementById('fname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const msg = document.getElementById('msg').value.trim();
+    const out = document.getElementById('form-msg');
+    if (!fname || !email || !msg) {
+      out.textContent = '⚠ Please fill in all required fields.';
+      out.className = 'error';
+      return;
+    }
+    const mailto = `mailto:marketing@twbis.info?subject=Enquiry from ${encodeURIComponent(fname)}&body=${encodeURIComponent('Name: ' + fname + '\nEmail: ' + email + '\n\n' + msg)}`;
+    window.location.href = mailto;
+    out.textContent = '✓ Your email client will open now. Thank you for reaching out!';
+    out.className = 'success';
+  }
+
+  // Subscribe
+  function handleSubscribe() {
+    const e = document.getElementById('sub-email').value.trim();
+    const out = document.getElementById('sub-msg');
+    if (!e || !e.includes('@')) {
+      out.textContent = '⚠ Please enter a valid email address.';
+      out.style.color = '#ff6b6b';
+      return;
+    }
+    window.location.href = `mailto:marketing@twbis.info?subject=Newsletter Subscription&body=${encodeURIComponent('Please add ' + e + ' to your newsletter list.')}`;
+    out.textContent = '✓ Thank you for subscribing!';
+    out.style.color = 'var(--teal)';
+    document.getElementById('sub-email').value = '';
+  }
+</script>
+</body>
+</html>
