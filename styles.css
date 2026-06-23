@@ -329,13 +329,13 @@ section { padding: 100px 5%; }
   margin-bottom: 1.25rem;
 }
 .service-card h4 {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--white);
   margin-bottom: .65rem;
 }
 .service-card p {
-  font-size: .87rem;
+  font-size: 1rem;
   color: var(--slate);
   line-height: 1.65;
   font-weight: 300;
